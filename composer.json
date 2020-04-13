@@ -1,0 +1,17 @@
+{
+    "name": "ed/ed-plugin",
+    "description": "Example plugin",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "edplugin",
+            "email": "edwardarilla@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" :{
+        "psr-4" : {"Inc\\" : "./inc"}
+    }
+}
