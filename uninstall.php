@@ -1,10 +1,11 @@
 <?php
 
 /**
- * Trigger this fille on plugin uninstall
- * @pachage edplugin
+ 
+ *@package edplugin 
  */
 
+ 
  if(! defined( 'WP_UNINSTALL_PLUGIN' )){
     die;
  }

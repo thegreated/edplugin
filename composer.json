@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "google/apiclient": "^2.0"
+    },
     "autoload" :{
         "psr-4" : {"Inc\\" : "./inc"}
     }

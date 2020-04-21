@@ -2,8 +2,10 @@
 
 /**
  
- *@pachage edplugin 
+ *@package edplugin 
  */
+
+ 
 
 namespace Inc\Base;
 

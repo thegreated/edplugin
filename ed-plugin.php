@@ -17,18 +17,37 @@ License: GPLv2 or later
 
 
 
-
+// if this file is called directly, abort!
 defined('ABSPATH') or die('Hey cant access file');
 
+
+//for composer to load
 if(file_exists(dirname(__FILE__) . '/vendor/autoload.php'))
 {
     require_once dirname(__FILE__) . '/vendor/autoload.php';
 }
 
-define('PLUGIN_PATH' , plugin_dir_path(__FILE__));
-define('PLUGIN_URL' , plugin_dir_url(__FILE__));
+//list of constant variable
 
-if( class_exists('Inc\\Init')){
+
+// activate plugin
+function activate_ed_plugin()
+{
+    Inc\Base\Activate::activate();
+}
+//deactivate plugin
+function deactivate_ed_plugin()
+{
+    Inc\Base\Deactivate::deactivate();
+}
+
+//register activate and deactivate
+register_activation_hook( __FILE__, 'activate_ed_plugin');
+register_deactivation_hook( __FILE__, 'deactivate_ed_plugin');
+
+
+if( class_exists('Inc\\Init'))
+{
     Inc\Init::register_services();
 }
 
